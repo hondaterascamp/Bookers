@@ -1,0 +1,20 @@
+<% if flash[:notice] %>
+  <p id="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<div class="book-detail">
+  <p class="book-field">
+    <span class="label">Title:</span>
+    <span class="value"><%= @book.title %></span>
+  </p>
+
+  <p class="book-field">
+    <span class="label">Body:</span>
+    <span class="value"><%= @book.body %></span>
+  </p>
+</div>
+
+<div class="book-actions">
+  <%= link_to "Edit", edit_book_path(@book), class: "btn" %>
+  <%= link_to "Back", books_path, class: "btn" %>
+</div>

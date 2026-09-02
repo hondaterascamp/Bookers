@@ -1,16 +1,16 @@
 // Add a service worker for processing Web Push notifications:
 //
-// self.addEventListener("push", async (event) => {
+// self.addEventBookener("push", async (event) => {
 //   const { title, options } = await event.data.json()
 //   event.waitUntil(self.registration.showNotification(title, options))
 // })
 //
-// self.addEventListener("notificationclick", function(event) {
+// self.addEventBookener("notificationclick", function(event) {
 //   event.notification.close()
 //   event.waitUntil(
-//     clients.matchAll({ type: "window" }).then((clientList) => {
-//       for (let i = 0; i < clientList.length; i++) {
-//         let client = clientList[i]
+//     clients.matchAll({ type: "window" }).then((clientBook) => {
+//       for (let i = 0; i < clientBook.length; i++) {
+//         let client = clientBook[i]
 //         let clientPath = (new URL(client.url)).pathname
 //
 //         if (clientPath == event.notification.data.path && "focus" in client) {
